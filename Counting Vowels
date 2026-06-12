@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char[] vowels = {'a','e','i','o','u'};
+        System.out.println("Enter a Sentence: ");
+        String Sentence = sc.nextLine();
+        int Count = 0;
+        
+        for (int i = 0; i < Sentence.length(); i++) {
+            char ch = Sentence.charAt(i);
+            for(char v : vowels){
+                Count++;
+                break;
+            }
+        }
+        System.out.println("Number of vowels: " + Count);
+        sc.close();
+    }
+}
