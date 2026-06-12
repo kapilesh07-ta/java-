@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter full name : ");
+        String input = sc.nextLine().trim();
+        int spacePos = input.indexOf(" ");
+        if(spacePos == -1){
+            System.out.println("Enter both First Name and Last Name: ");
+            return;
+        }
+        String FirstName = input.substring(0,spacePos);
+        String LastName = input.substring(spacePos + 1);
+        System.out.println("First Name : " + FirstName);
+        System.out.println("Last Name : " + LastName);
+    }
+
+
+class Main {
+    public static void main(String[] args) {
+        String Text1 = "You are the Best";
+        String Text2 = "You are the worst";
+        String result = String.join(" and ", Text1 , Text2);
+        System.out.println("Joined ; " + result);
+    }
+}
